@@ -20,6 +20,7 @@ classifiers = [
 ]
 dependencies = [
     "attrs>=23.1.0,<24.0",
+    "stretchable>=1.0.0b2,<2.0",
     ]
 dynamic = ["version"]
 

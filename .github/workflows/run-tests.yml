@@ -1,0 +1,45 @@
+name: Run Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+      - name: Install the necessary packages
+        run: pip install .[test]
+      - name: Run tests
+        run: pytest --cov-report xml:reports/coverage.xml --cov=stretchable --junit-xml reports/pytest.xml --html=reports/pytest.html --self-contained-html tests/
+        continue-on-error: true
+      - name: Upload test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: reports/*
+      - name: Generate badges
+        run: |
+          pip install genbadge defusedxml
+          genbadge tests --input-file ./reports/pytest.xml --output-file ./disposition-tests.svg
+          genbadge coverage --input-file ./reports/coverage.xml --output-file ./disposition-coverage.svg
+        if: github.ref == 'refs/heads/main'
+      - name: Upload test results badge to gist
+        uses: exuanbo/actions-deploy-gist@v1
+        with:
+          token: ${{ secrets.GIST_TOKEN }}
+          gist_id: d3bf1bee9867bb5fc725411dc256c185
+          file_path: disposition-tests.svg
+        if: github.ref == 'refs/heads/main'
+      - name: Upload coverage badge to gist
+        uses: exuanbo/actions-deploy-gist@v1
+        with:
+          token: ${{ secrets.GIST_TOKEN }}
+          gist_id: 8ed41c3763b9e12b2f013a0c7d70827c
+          file_path: disposition-coverage.svg
+        if: github.ref == 'refs/heads/main'
