@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "disposition"
+description = "Framework for generating reports and plots with flexible and accurate layouts"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["reports", "layout", "plots"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "attrs>=23.1.0,<24.0",
+    ]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+build = [
+    "setuptools",
+    "build",
+    "wheel",
+    "twine",
+]
+test = [
+    "pytest",
+    "pytest-cache",
+    "pytest-cov",
+    "pytest-html",
+    "hypothesis",
+    ]
+
+[project.urls]
+Homepage = "https://github.com/mortencombat/disposition"
+
+[tool.setuptools.dynamic]
+version = {file = [".version"]}
