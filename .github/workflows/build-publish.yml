@@ -43,7 +43,7 @@ jobs:
         env:
           VERSION: ${{ steps.get-version.outputs.version }}
         run: |
-          $VERSION | Out-File -Force -Encoding "UTF8" -FilePath ".version"
+          $Env:VERSION | Out-File -Force -Encoding "UTF8" -FilePath ".version"
         shell: pwsh
       - name: Build package
         run: |
