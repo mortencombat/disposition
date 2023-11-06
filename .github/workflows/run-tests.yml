@@ -16,7 +16,7 @@ jobs:
       - name: Install the necessary packages
         run: pip install .[test]
       - name: Run tests
-        run: pytest --cov-report xml:reports/coverage.xml --cov=stretchable --junit-xml reports/pytest.xml --html=reports/pytest.html --self-contained-html tests/
+        run: pytest --cov-report xml:reports/coverage.xml --cov=disposition --junit-xml reports/pytest.xml --html=reports/pytest.html --self-contained-html tests/
         continue-on-error: true
       - name: Upload test results
         uses: actions/upload-artifact@v3
