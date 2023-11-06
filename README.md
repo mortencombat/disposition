@@ -10,6 +10,9 @@
 
 It uses [stretchable](https://github.com/mortencombat/stretchable) (CSS Grid/Flexbox) for layouting and [Matplotlib](https://matplotlib.org/) for rendering.
 
+> [!IMPORTANT]
+> This framework is in the early stages of planning/development. It is not yet available for use.
+
 ## License
 
 This work is released under the MIT license. A copy of the license is provided in the [LICENSE](https://github.com/mortencombat/disposition/blob/main/LICENSE) file.
