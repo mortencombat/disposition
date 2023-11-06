@@ -6,12 +6,12 @@
 [![pytest - results](https://gist.github.com/mortencombat/d3bf1bee9867bb5fc725411dc256c185/raw/disposition-tests.svg)](https://github.com/mortencombat/disposition/actions/workflows/run-tests.yml)
 [![Test coverage](https://gist.github.com/mortencombat/8ed41c3763b9e12b2f013a0c7d70827c/raw/disposition-coverage.svg)](https://github.com/mortencombat/disposition/actions/workflows/run-tests.yml)
 
+> [!IMPORTANT]
+> This framework is in the early stages of planning/development. It is not yet available for use.
+
 **disposition** is a Python-based framework for generating reports and plots with flexible and accurate layouts.
 
 It uses [stretchable](https://github.com/mortencombat/stretchable) (CSS Grid/Flexbox) for layouting and [Matplotlib](https://matplotlib.org/) for rendering.
-
-> [!IMPORTANT]
-> This framework is in the early stages of planning/development. It is not yet available for use.
 
 ## License
 
