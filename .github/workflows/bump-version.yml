@@ -59,6 +59,8 @@ jobs:
 
       - name: Bump version and create tag
         run: |
-          VERSION=$(poetry version ${{ github.event.inputs.version }} --short)
-          git tag -s $VERSION
-          git push origin main --follow-tags
+          ver=$(poetry version ${{ github.event.inputs.version }} --short)
+          now="$(date +'%Y.%m.%d')"
+          git tag -s -a $ver -m "$ver ($now)"
+          git push origin $ver
+        # git push origin main --follow-tags
