@@ -42,7 +42,7 @@ jobs:
 
       - name: Build package
         run: |
-          pip install dunamai
+          pip install dunamai poetry-dynamic-versioning
           dunamai from any
           poetry build
 
