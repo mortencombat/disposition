@@ -49,8 +49,6 @@ jobs:
 
       - name: Bump version and create tag
         run: |
-          pip install dunamai
-          dunamai from git
           poetry self add "poetry-dynamic-versioning[plugin]"        
           ver=v$(poetry version ${{ github.event.inputs.version }} --short)
           now="$(date +'%Y.%m.%d')"
