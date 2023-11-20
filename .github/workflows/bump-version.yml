@@ -18,6 +18,7 @@ on:
 
 jobs:
   bump-version:
+    name: Bump Version
     runs-on: ubuntu-latest
     steps:
       # Check out the content (source branch).  Use a deploy key so that
