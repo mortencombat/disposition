@@ -1,6 +1,8 @@
 # disposition
 
 [![PyPI - Version](https://img.shields.io/pypi/v/disposition)](https://pypi.org/project/disposition/)
+[![Python Versions]](https://img.shields.io/pypi/pyversions/disposition)
+[![License]](https://img.shields.io/github/license/mortencombat/disposition?color=blue)
 [![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/mortencombat/disposition/build-publish.yml?logo=github)](https://github.com/mortencombat/disposition/actions/workflows/build-publish.yml)
 [![GitHub issues](https://img.shields.io/github/issues/mortencombat/disposition?logo=github)](https://github.com/mortencombat/disposition/issues)
 [![pytest - results](https://gist.github.com/mortencombat/d3bf1bee9867bb5fc725411dc256c185/raw/disposition-tests.svg)](https://github.com/mortencombat/disposition/actions/workflows/run-tests.yml)
