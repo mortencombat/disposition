@@ -1,46 +1,50 @@
+
 [build-system]
-requires = ["setuptools>=61.0", "setuptools-scm"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
 
-[tool.setuptools.packages.find]
-where = ["src"]
-
-[project]
+[tool.poetry]
 name = "disposition"
-description = "Framework for generating reports and plots with flexible and accurate layouts"
+version = "0.0.0"
+description = "Framework for generating reports and plots with flexible and precise layouts"
+authors = ["Kenneth Trelborg Vestergaard <mortencombat@fastmail.com>"]
+license = "MIT"
 readme = "README.md"
-requires-python = ">=3.11"
+homepage = "https://disposition.readthedocs.io"
+repository = "https://github.com/mortencombat/disposition"
+documentation = "https://disposition.readthedocs.io"
 keywords = ["reports", "layout", "plots"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Science/Research",
     "Operating System :: OS Independent",
 ]
-dependencies = [
-    "attrs>=23.1.0,<24.0",
-    "stretchable>=1.0.0b2,<2.0",
-    ]
-dynamic = ["version"]
-
-[project.optional-dependencies]
-build = [
-    "setuptools",
-    "build",
-    "wheel",
-    "twine",
+packages = [
+    { include = "disposition", from = "src" }
 ]
-test = [
-    "pytest",
-    "pytest-cache",
-    "pytest-cov",
-    "pytest-html",
-    "hypothesis",
-    ]
 
-[project.urls]
-Homepage = "https://github.com/mortencombat/disposition"
+[tool.poetry.dependencies]
+python = "^3.9"
+stretchable = { version = "^1.0.0b3", allow-prereleases = true }
 
-[tool.setuptools.dynamic]
-version = {file = [".version"]}
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4"
+pytest-cache = "*"
+pytest-cov = "*"
+pytest-html = "*"
+hypothesis = "*"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^7.2"
+myst-parser = "^2.0"
+furo = "^2023.9.10"
+sphinx-copybutton = "*"
+readthedocs-sphinx-search = "*"
+sphinx-autodoc-typehints = "^1.25"
+
+[tool.poetry-dynamic-versioning]
+enable = true
