@@ -1,15 +1,10 @@
 name: Bump Version
 
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
 on:
   workflow_dispatch:
-    # Inputs the workflow accepts.
     inputs:
       version:
-        # Friendly description to be shown in the UI instead of 'name'
         description: "Semver type of new version"
-        # Input has to be provided for the workflow to run
         required: true
         type: choice
         options:
@@ -56,4 +51,3 @@ jobs:
           now="$(date +'%Y.%m.%d')"
           git tag -s -a $ver -m "$ver ($now)"
           git push origin $ver
-        # git push origin main --follow-tags
