@@ -8,8 +8,7 @@ on:
     types: [opened, synchronize, reopened, ready_for_review]
 
 jobs:
-  test:
-    name: Run tests
+  run-tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,6 +20,8 @@ jobs:
 
       - name: Install and configure Poetry
         uses: snok/install-poetry@v1
+        with:
+          virtualenvs-create: false
 
       - name: Install the necessary packages
         run: poetry install
@@ -38,8 +39,8 @@ jobs:
       - name: Generate badges
         run: |
           pip install genbadge defusedxml
-          genbadge tests --input-file ./reports/pytest.xml --output-file ./disposition-tests.svg
-          genbadge coverage --input-file ./reports/coverage.xml --output-file ./disposition-coverage.svg
+          genbadge tests --input-file reports/pytest.xml --output-file disposition-tests.svg
+          genbadge coverage --input-file reports/coverage.xml --output-file disposition-coverage.svg
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
       - name: Upload test results badge to gist
