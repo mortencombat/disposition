@@ -1,8 +1,8 @@
 # disposition
 
 [![PyPI - Version](https://img.shields.io/pypi/v/disposition)](https://pypi.org/project/disposition/)
-[![Python Versions]](https://img.shields.io/pypi/pyversions/disposition)
-[![License]](https://img.shields.io/github/license/mortencombat/disposition?color=blue)
+[![Python Versions](https://img.shields.io/pypi/pyversions/disposition)](https://pypi.org/project/disposition/)
+[![License](https://img.shields.io/github/license/mortencombat/disposition?color=blue)](https://github.com/mortencombat/disposition/blob/initial-setup/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/mortencombat/disposition?logo=github)](https://github.com/mortencombat/disposition/issues)
 [![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/mortencombat/disposition/build-publish.yml?logo=github)](https://github.com/mortencombat/disposition/actions/workflows/build-publish.yml)()
 [![Documentation Status](https://readthedocs.org/projects/disposition/badge/?version=latest)](https://disposition.readthedocs.io/en/latest/?badge=latest)[![pytest - results](https://gist.github.com/mortencombat/d3bf1bee9867bb5fc725411dc256c185/raw/disposition-tests.svg)](https://github.com/mortencombat/disposition/actions/workflows/run-tests.yml)
