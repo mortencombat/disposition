@@ -12,7 +12,7 @@
 > [!IMPORTANT]
 > This framework is in the early stages of planning/development. It is not yet available for use.
 
-**disposition** is a Python-based framework for generating reports and plots with flexible and accurate layouts.
+**disposition** is a Python-based framework for generating reports and plots with flexible and precise layouts.
 
 It uses [stretchable](https://github.com/mortencombat/stretchable) (CSS Grid/Flexbox) for layouting and [Matplotlib](https://matplotlib.org/) for rendering.
 
