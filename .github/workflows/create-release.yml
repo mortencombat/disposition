@@ -42,7 +42,8 @@ jobs:
 
       - name: Build package
         run: |
-          poetry install
+          pip install dunamai
+          dunamai from any
           poetry build
 
       - name: Upload build artifacts
