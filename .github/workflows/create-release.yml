@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          # This is necessary so that we have the tags.
-          fetch-depth: 0
+        # with:
+        # This is necessary so that we have the tags.
+        # fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -30,15 +30,20 @@ jobs:
           args: --style semver
 
       - name: Write _version.py file
-        run: echo "__version__ = \"$VERSION\"" > src/disposition/_version.py
+        run: |
+          echo "Version: $VERSION"
+          echo "__version__ = \"$VERSION\"" > src/disposition/_version.py
 
       - name: Install and configure Poetry
         uses: snok/install-poetry@v1
         with:
-          virtualenvs-create: false
+          virtualenvs-create: true
+          virtualenvs-in-project: true
 
       - name: Build package
-        run: poetry build
+        run: |
+          poetry install
+          poetry build
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
