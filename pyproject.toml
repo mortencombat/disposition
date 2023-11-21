@@ -29,6 +29,8 @@ python = "^3.9"
 stretchable = { version = "^1.0.0b3", allow-prereleases = true }
 
 [tool.poetry.group.dev.dependencies]
+black = "^23.11.0"
+flake8 = "^6.1.0"
 pytest = "^7.4"
 pytest-cache = "*"
 pytest-cov = "*"
