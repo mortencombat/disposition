@@ -1,5 +1,12 @@
 {
-    "extends": ["config:recommended"],
+    "extends": [
+        "config:recommended",
+        ":approveMajorUpdates",
+        ":label(dependencies)",
+        ":maintainLockFilesWeekly",
+        ":automergePr",
+        ""
+    ],
     "packageRules": [
         {
             "matchDepTypes": ["dev-dependencies"],
@@ -8,8 +15,5 @@
             "groupSlug": "dev-dependencies",
             "automerge": true
         }
-    ],
-    "lockFileMaintenance": {
-        "enabled": true
-    }
+    ]
 }
