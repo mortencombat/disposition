@@ -1,0 +1,15 @@
+{
+    "extends": ["config:recommended"],
+    "packageRules": [
+        {
+            "matchDepTypes": ["dev-dependencies"],
+            "matchUpdateTypes": ["patch", "minor"],
+            "groupName": "devDependencies (non-major)",
+            "groupSlug": "dev-dependencies",
+            "automerge": true
+        }
+    ],
+    "lockFileMaintenance": {
+        "enabled": true
+    }
+}
