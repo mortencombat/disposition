@@ -73,8 +73,7 @@ class EnumDocumenter(ClassDocumenter):
 
 
 class PyEnumXRefRole(PyXRefRole):
-    """
-    XRefRole for Enum/Flag members.
+    """XRefRole for Enum/Flag members.
 
     .. versionadded:: 0.4.0
     .. autosummary-widths:: 40/100
@@ -88,8 +87,8 @@ class PyEnumXRefRole(PyXRefRole):
         title: str,
         target: str,
     ) -> tuple[str, str]:
-        """
-        Called after parsing title and target text, and creating the reference node (given in ``refnode``).
+        """Called after parsing title and target text, and creating the
+        reference node (given in ``refnode``).
 
         This method can alter the reference node and must return a new (or the same)
         ``(title, target)`` tuple.
