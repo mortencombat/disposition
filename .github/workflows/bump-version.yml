@@ -49,7 +49,7 @@ jobs:
 
       - name: Bump version and create tag
         run: |
-          poetry self add "poetry-dynamic-versioning[plugin]"        
+          poetry self add "poetry-dynamic-versioning[plugin]"
           ver=v$(poetry version ${{ github.event.inputs.version }} --short)
           now="$(date +'%Y.%m.%d')"
           git tag -s -a $ver -m "$ver ($now)"

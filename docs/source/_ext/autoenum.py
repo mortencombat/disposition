@@ -9,8 +9,7 @@ from sphinx.application import Sphinx
 from sphinx.domains import ObjType
 from sphinx.domains.python import PyClasslike, PyXRefRole
 from sphinx.environment import BuildEnvironment
-from sphinx.ext.autodoc import ClassDocumenter, bool_option
-from sphinx.util.inspect import memory_address_re
+from sphinx.ext.autodoc import ClassDocumenter
 
 
 def setup(app: Sphinx) -> None:
@@ -28,15 +27,10 @@ class EnumDocumenter(ClassDocumenter):
     directivetype = "enum"
     priority = 20
     class_xref = ":class:`~enum.Enum`"
-
-    # priority = 10 + ClassDocumenter.priority
     option_spec = dict(ClassDocumenter.option_spec)
-    option_spec["hex"] = bool_option
 
     @classmethod
-    def can_document_member(
-        cls, member: Any, membername: str, isattr: bool, parent: Any
-    ) -> bool:
+    def can_document_member(cls, member: Any, membername: str, isattr: bool, parent: Any) -> bool:
         try:
             return issubclass(member, Enum)
         except TypeError:
@@ -55,7 +49,6 @@ class EnumDocumenter(ClassDocumenter):
 
         source_name = self.get_sourcename()
         enum_object: Enum = self.object
-        use_hex = self.options.hex
         self.add_line("", source_name)
 
         self.add_line(":Members:", source_name)

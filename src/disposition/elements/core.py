@@ -21,7 +21,8 @@ So the pipeline would be:
 
 TODO:
  - List requirements
- - List of report/plot types that must be supported/facilitated (single/multi page for single or multiple models/entities, etc.)
+ - List of report/plot types that must be supported/facilitated (single/multi
+   page for single or multiple models/entities, etc.)
  - Make a simple prototype/example of how the above would look. Considering various types of canvas/templates.
 
 
