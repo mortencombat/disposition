@@ -27,6 +27,9 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
           poetry-version: ${{ env.POETRY_VERSION }}
 
+      - name: Activate Poetry shell
+        run: poetry shell
+
       - name: Run linters
         uses: wearerequired/lint-action@v2
         with:
@@ -43,7 +46,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.local
-          key: dotlocal-${{ runner.os }}-${{ hashFiles('.github/workflows/run-checks.yml') }}
+          key: dotlocal-${{ runner.os }}-${{ hashFiles('.github/workflows/integration.yml') }}
 
       - name: Set up Python
         id: setup-python
