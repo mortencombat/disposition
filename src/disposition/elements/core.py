@@ -34,10 +34,12 @@ class Element(ABC, Node):
     ...
 
     def pre_render(self, **args) -> None:
-        """This method is called prior to positioning of elements. Any
-        preprocessing of model data necessary for measuring the element should
-        be done here, so measuring can be as fast as possible. Pre-rendering is
-        optional."""
+        """This method is called prior to positioning of elements.
+
+        Any preprocessing of model data necessary for measuring the
+        element should be done here, so measuring can be as fast as
+        possible. Pre-rendering is optional.
+        """
 
     def measure(self):
         """This should be optional, but only if the size of the element is
@@ -48,5 +50,7 @@ class Element(ABC, Node):
         """This method should perform the actual rendering."""
 
     def post_render(self, **args) -> None:
-        """This method is called after rendering the model data, eg. can be used
-        for cleanup/teardown. Post-rendering is optional."""
+        """This method is called after rendering the model data, eg.
+
+        can be used for cleanup/teardown. Post-rendering is optional.
+        """
