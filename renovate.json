@@ -1,6 +1,20 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ]
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended",
+        ":approveMajorUpdates",
+        ":label(dependencies)",
+        ":maintainLockFilesWeekly",
+        ":automergePr",
+        ""
+    ],
+    "packageRules": [
+        {
+            "matchDepTypes": ["dev-dependencies"],
+            "matchUpdateTypes": ["patch", "minor"],
+            "groupName": "devDependencies (non-major)",
+            "groupSlug": "dev-dependencies",
+            "automerge": true
+        }
+    ]
 }
