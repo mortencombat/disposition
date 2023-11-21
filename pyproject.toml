@@ -50,3 +50,6 @@ sphinx-autodoc-typehints = "^1.25"
 
 [tool.poetry-dynamic-versioning]
 enable = true
+
+[tool.black]
+line_length = 120
