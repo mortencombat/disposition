@@ -36,6 +36,7 @@ pytest-cache = "*"
 pytest-cov = "*"
 pytest-html = "*"
 hypothesis = "*"
+pre-commit = "^3.5.0"
 
 [tool.poetry.group.docs]
 optional = true

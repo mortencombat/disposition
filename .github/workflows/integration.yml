@@ -1,4 +1,4 @@
-name: Run Checks
+name: Integration
 
 on:
   push:
@@ -9,33 +9,7 @@ on:
       - main
     types: [opened, synchronize, reopened, ready_for_review]
 
-env:
-  PYTHON_VERSION: "3.11"
-  POETRY_VERSION: "1.7.1"
-
 jobs:
-  run-linters:
-    name: Run Linters
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Python, Poetry and dependencies
-        uses: packetcoders/action-setup-cache-python-poetry@v1.0.3
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          poetry-version: ${{ env.POETRY_VERSION }}
-
-      - name: Activate Poetry shell
-        run: source $(poetry env info --path)/bin/activate
-
-      - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with:
-          black: true
-          flake8: true
-
   run-tests:
     name: Run Tests
     runs-on: ubuntu-latest

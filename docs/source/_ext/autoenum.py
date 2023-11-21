@@ -30,9 +30,7 @@ class EnumDocumenter(ClassDocumenter):
     option_spec = dict(ClassDocumenter.option_spec)
 
     @classmethod
-    def can_document_member(
-        cls, member: Any, membername: str, isattr: bool, parent: Any
-    ) -> bool:
+    def can_document_member(cls, member: Any, membername: str, isattr: bool, parent: Any) -> bool:
         try:
             return issubclass(member, Enum)
         except TypeError:
