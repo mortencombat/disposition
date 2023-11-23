@@ -1,0 +1,25 @@
+<!-- Consider if the <template> element is necessary. The parsing function
+could add a root element automatically. The element could be used to distinguish
+between entire canvasses or just components/partials -->
+<template>
+    <!-- There can be any number of <style /> elements (at this level only) -->
+    <style path="templates-poc/styles.css" />
+    <style>
+        #header {
+            height: 50mm;
+        }
+    </style>
+    <canvas>
+        <div id="header">
+            <div><img /></div>
+            <div>Header title</div>
+        </div>
+        <div>
+            <template path="sidebar.xml" />
+            <div>Content</div>
+        </div>
+        {% if include_footer %}
+        <div class="test">Footer</div>
+        {% endif %}
+    </canvas>
+</template>

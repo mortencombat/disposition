@@ -1,0 +1,8 @@
+<template>
+    <style path="templates-poc/sidebar.css" />
+    <component>
+        <div id="sidebar">
+            Some sidebar content.
+        </div>
+    </component>
+</template>
