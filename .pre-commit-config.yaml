@@ -8,17 +8,17 @@ repos:
       - id: debug-statements
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.15.0
+    rev: v3.15.2
     hooks:
       - id: pyupgrade
 
   - repo: https://github.com/PyCQA/flake8
-    rev: 6.1.0
+    rev: 7.0.0
     hooks:
       - id: flake8
 
   - repo: https://github.com/psf/black
-    rev: 23.11.0
+    rev: 24.3.0
     hooks:
       - id: black
 
