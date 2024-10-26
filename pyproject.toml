@@ -51,7 +51,6 @@ sphinx = "^7.2"
 myst-parser = "^2.0"
 furo = "^2023.9.10"
 sphinx-copybutton = "*"
-readthedocs-sphinx-search = "*"
 sphinx-autodoc-typehints = "^1.25"
 
 [tool.poetry-dynamic-versioning]

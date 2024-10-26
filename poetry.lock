@@ -1121,17 +1121,6 @@ files = [
 ]
 
 [[package]]
-name = "readthedocs-sphinx-search"
-version = "0.3.1"
-description = "Sphinx extension to enable search as you type for docs hosted on Read the Docs."
-optional = false
-python-versions = ">=3.6"
-files = [
-    {file = "readthedocs-sphinx-search-0.3.1.tar.gz", hash = "sha256:32c1ed5b129691adfb7e40effcecf887c5ebd525a06d96b9df11afb9461c9e33"},
-    {file = "readthedocs_sphinx_search-0.3.1-py3-none-any.whl", hash = "sha256:6ee204bf66a78684f370ac8b0f47eeccffbe507586d0826958365463ab2becbf"},
-]
-
-[[package]]
 name = "requests"
 version = "2.31.0"
 description = "Python HTTP for Humans."
@@ -1396,20 +1385,20 @@ test = ["pytest"]
 
 [[package]]
 name = "stretchable"
-version = "1.0.0b3"
+version = "1.0.0"
 description = "Layout library for Python (based on Taffy, a rust-powered implementation of CSS Grid/Flexbox)"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "stretchable-1.0.0b3-cp38-abi3-macosx_10_7_x86_64.whl", hash = "sha256:c785a848450bc9047b3ecf6e1d1f6ca7c3df6081537f5cf7100749162ca1ae34"},
-    {file = "stretchable-1.0.0b3-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:71539f73144dabc4dc2b2f2126c5c8bc5fc00ca254a746a9baf998f06680b871"},
-    {file = "stretchable-1.0.0b3-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ac8ae69cfcecd72d7a7594037a92ff611410dd199f4d343acb32c4805a3135dc"},
-    {file = "stretchable-1.0.0b3-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c8a19428a67c7eb136e65aaf5320502608143426d753a9c13a638dd305413936"},
-    {file = "stretchable-1.0.0b3-cp38-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:e55a552bf20663ff15cc36d1dde09414953730c3e5a7d03587ce6d58f0f1ffa2"},
-    {file = "stretchable-1.0.0b3-cp38-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:920301830f4eb41dc2be0c9ad2e2c531e6454f2512021d79e7bed8d1d39257ff"},
-    {file = "stretchable-1.0.0b3-cp38-abi3-win32.whl", hash = "sha256:ef6859f6ac90f46d7b9fc70807ff409bfa46686d126e1a49fad919e2ca8adca8"},
-    {file = "stretchable-1.0.0b3-cp38-abi3-win_amd64.whl", hash = "sha256:77eb79fae8a4c61f47ddefe379da56a2e02c60432e0006cb3db1b064028404b8"},
-    {file = "stretchable-1.0.0b3-cp38-abi3-win_arm64.whl", hash = "sha256:550da487b268da09152283dc05d24a00f40e67c3e1a47ded36e2e1213ea04963"},
+    {file = "stretchable-1.0.0-cp38-abi3-macosx_10_7_x86_64.whl", hash = "sha256:59788c98def14e2b7035cdab25b133aa064fb23d58f1e7526f3f5ecef1d9ed1d"},
+    {file = "stretchable-1.0.0-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:5c7ce2a9379246820eaf5f3249f29c398f366544f27ef5ad491922878256be80"},
+    {file = "stretchable-1.0.0-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:22d63abf1b6e802071aaefd23cd40e4d930e4ce9aa770bcc4bda6ee04fcf032b"},
+    {file = "stretchable-1.0.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:eb68382ed2b73749bab1e1b7538250b543fa6e6c4988fe3c00feb49c07cd7c74"},
+    {file = "stretchable-1.0.0-cp38-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:31b394447f159232b431df75f8013c872ab83824d5366034406010498cfd9eb1"},
+    {file = "stretchable-1.0.0-cp38-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:264df60aa8b3dab755c0c94cc7f81d30443df00686785c12b3b41e3a8c25fdb7"},
+    {file = "stretchable-1.0.0-cp38-abi3-win32.whl", hash = "sha256:bfa075ff1c4bb24f48f5952783578bbe330414ea9817defad75bb25e355d4a06"},
+    {file = "stretchable-1.0.0-cp38-abi3-win_amd64.whl", hash = "sha256:8342938e5be023a59cd03e877aa726c9ba4824ff7f36b08be8fd2269e1bea575"},
+    {file = "stretchable-1.0.0-cp38-abi3-win_arm64.whl", hash = "sha256:f9c2706e6dddf98f4037b6ac11717fb287806ff0ff51fe2650b6bdd0afb7bdb6"},
 ]
 
 [package.dependencies]
@@ -1417,6 +1406,7 @@ attrs = ">=23.1.0,<24.0"
 
 [package.extras]
 build = ["build", "maturin (>=1.1,<2.0)", "twine"]
+docs = ["furo", "myst-parser", "readthedocs-sphinx-search", "sphinx", "sphinx-autobuild", "sphinx-autodoc-typehints", "sphinx-copybutton", "sphinx_design (>=0.5,<1.0)", "sphinxcontrib-mermaid (>=0.9.2,<1.0)"]
 test = ["hypothesis", "pytest", "pytest-cache", "pytest-cov", "pytest-html", "selenium"]
 
 [[package]]
@@ -1534,4 +1524,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "1721bd8be7188551873c47907c6fd25bc4f676ed9af21e112e51f1bc21132868"
+content-hash = "807cd3b2349a469b6ca2d1b858108d9fa29ab467d50c8ddb061251de9119ed8c"
