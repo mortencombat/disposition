@@ -103,7 +103,6 @@ class PyEnumXRefRole(PyXRefRole):
 
         .. latex:clearpage::
         """
-
         refnode["py:module"] = env.ref_context.get("py:module")
         refnode["py:class"] = env.ref_context.get("py:class")
 
