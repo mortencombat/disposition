@@ -960,6 +960,7 @@ files = [
     {file = "PyYAML-6.0.1-cp311-cp311-win_amd64.whl", hash = "sha256:bf07ee2fef7014951eeb99f56f39c9bb4af143d8aa3c21b1677805985307da34"},
     {file = "PyYAML-6.0.1-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:855fb52b0dc35af121542a76b9a84f8d1cd886ea97c84703eaa6d88e37a2ad28"},
     {file = "PyYAML-6.0.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:40df9b996c2b73138957fe23a16a4f0ba614f4c0efce1e9406a184b6d07fa3a9"},
+    {file = "PyYAML-6.0.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a08c6f0fe150303c1c6b71ebcd7213c2858041a7e01975da3a99aed1e7a378ef"},
     {file = "PyYAML-6.0.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6c22bec3fbe2524cde73d7ada88f6566758a8f7227bfbf93a408a9d86bcc12a0"},
     {file = "PyYAML-6.0.1-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:8d4e9c88387b0f5c7d5f281e55304de64cf7f9c0021a3525bd3b1c542da3b0e4"},
     {file = "PyYAML-6.0.1-cp312-cp312-win32.whl", hash = "sha256:d483d2cdf104e7c9fa60c544d92981f12ad66a457afae824d146093b8c294c54"},
@@ -1270,28 +1271,28 @@ test = ["pytest"]
 
 [[package]]
 name = "stretchable"
-version = "1.0.0"
+version = "1.1.8"
 description = "Layout library for Python (based on Taffy, a rust-powered implementation of CSS Grid/Flexbox)"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "stretchable-1.0.0-cp38-abi3-macosx_10_7_x86_64.whl", hash = "sha256:59788c98def14e2b7035cdab25b133aa064fb23d58f1e7526f3f5ecef1d9ed1d"},
-    {file = "stretchable-1.0.0-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:5c7ce2a9379246820eaf5f3249f29c398f366544f27ef5ad491922878256be80"},
-    {file = "stretchable-1.0.0-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:22d63abf1b6e802071aaefd23cd40e4d930e4ce9aa770bcc4bda6ee04fcf032b"},
-    {file = "stretchable-1.0.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:eb68382ed2b73749bab1e1b7538250b543fa6e6c4988fe3c00feb49c07cd7c74"},
-    {file = "stretchable-1.0.0-cp38-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:31b394447f159232b431df75f8013c872ab83824d5366034406010498cfd9eb1"},
-    {file = "stretchable-1.0.0-cp38-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:264df60aa8b3dab755c0c94cc7f81d30443df00686785c12b3b41e3a8c25fdb7"},
-    {file = "stretchable-1.0.0-cp38-abi3-win32.whl", hash = "sha256:bfa075ff1c4bb24f48f5952783578bbe330414ea9817defad75bb25e355d4a06"},
-    {file = "stretchable-1.0.0-cp38-abi3-win_amd64.whl", hash = "sha256:8342938e5be023a59cd03e877aa726c9ba4824ff7f36b08be8fd2269e1bea575"},
-    {file = "stretchable-1.0.0-cp38-abi3-win_arm64.whl", hash = "sha256:f9c2706e6dddf98f4037b6ac11717fb287806ff0ff51fe2650b6bdd0afb7bdb6"},
+    {file = "stretchable-1.1.8-cp38-abi3-macosx_10_12_x86_64.whl", hash = "sha256:e34e7988129b877bed1f9a247deed174ffed8066ab5b9a3178f18f1102836468"},
+    {file = "stretchable-1.1.8-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:a9160a4013a1e37bd4c5dd4a6ea252cec2923cc91ba6bd68b20e7a1a8bfee8be"},
+    {file = "stretchable-1.1.8-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:173b02e696763d1a1b922c9930d55740940c4a22290e11ae564a7574d175c54b"},
+    {file = "stretchable-1.1.8-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1710c748f49c969fb067679847b371f49c1bc9923477a4f8d209029aee485809"},
+    {file = "stretchable-1.1.8-cp38-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:7379be3622844bea7356fab3c83b0b46c10b3b8f5cabc7b2071134f7169c1226"},
+    {file = "stretchable-1.1.8-cp38-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:b031ba4e400599c87ffcb9cd818f3939db6f5434aae49533481842939d507ba8"},
+    {file = "stretchable-1.1.8-cp38-abi3-win32.whl", hash = "sha256:642c8025ec7ea12d37a66fb4cdd5619513efc6f1617cf1cafdb01d49c18a2dc3"},
+    {file = "stretchable-1.1.8-cp38-abi3-win_amd64.whl", hash = "sha256:42c10d864b3e8b2cb0ce16a64df6905318c6a78c6269041b1532c606bf6158c3"},
+    {file = "stretchable-1.1.8-cp38-abi3-win_arm64.whl", hash = "sha256:fec7556c160f73bd200af15570e6d219612499760172cb3485680e1286a7a316"},
 ]
 
 [package.dependencies]
-attrs = ">=23.1.0,<24.0"
+attrs = ">=23.1,<26.0"
 
 [package.extras]
-build = ["build", "maturin (>=1.1,<2.0)", "twine"]
-docs = ["furo", "myst-parser", "readthedocs-sphinx-search", "sphinx", "sphinx-autobuild", "sphinx-autodoc-typehints", "sphinx-copybutton", "sphinx_design (>=0.5,<1.0)", "sphinxcontrib-mermaid (>=0.9.2,<1.0)"]
+build = ["build", "maturin (==1.7.6)", "twine"]
+docs = ["furo", "myst-parser", "sphinx", "sphinx-autobuild", "sphinx-autodoc-typehints", "sphinx-copybutton", "sphinx-design (>=0.5,<1.0)", "sphinxcontrib-mermaid (>=0.9.2,<1.0)"]
 test = ["hypothesis", "pytest", "pytest-cache", "pytest-cov", "pytest-html", "selenium"]
 
 [[package]]
